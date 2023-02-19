@@ -9,7 +9,7 @@ class TestNode(unittest.TestCase):
 
     def test_Node(self):
         self.assertEqual(self.node_10.data, 10)
-        self.assertEqual(self.node_10.next, None)
+        self.assertEqual(self.node_10.next_node, None)
 
 class TestStack(unittest.TestCase):
     """Тест класса Stack"""
