@@ -20,5 +20,5 @@ class Stack:
         self.top = self.top.next_node
         return remove.data
 
-
-
+#stak = Stack()
+#print(stak.pop())
