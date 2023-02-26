@@ -1,6 +1,6 @@
 import unittest
 from datastruct.stack import Node, Stack
-#from datastruct.custom_queue import Node, Queue
+
 
 
 class TestNode(unittest.TestCase):
