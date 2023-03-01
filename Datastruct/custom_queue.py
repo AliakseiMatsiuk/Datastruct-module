@@ -1,3 +1,4 @@
+
 class Node:
     """ Это узел """
 
@@ -21,14 +22,20 @@ class Queue:
             self.tail.next_node = new_node
             self.tail = new_node
 
+    def dequeue(self):
+        to_return = self.head.data
+        if self.head is not None:
+            self.head = self.head.next_node
+            if self.head is None:
+                self.tail = None
+        return to_return
 
 # queue = Queue()
 # queue.enqueue('data1')
 # queue.enqueue('data2')
 # queue.enqueue('data3')
 #
-# print(queue.head.data)
-# print(queue.head.next_node.data)
-# print(queue.tail.data)
-# print(queue.tail.next_node)
-# print(queue.tail.next_node.data)
+# print(queue.dequeue())
+# print(queue.dequeue())
+# print(queue.dequeue())
+# print(queue.dequeue())

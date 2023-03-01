@@ -25,3 +25,11 @@ class QueueTest(unittest.TestCase):
     def test_enqueue(self):
         self.empty_queue.enqueue(self.node)
         self.assertEqual(self.node.data, self.data)
+
+
+    def test_dequeue_single_node(self):
+        self.empty_queue.enqueue(1)
+        self.empty_queue.enqueue(2)
+        self.assertEqual(self.empty_queue.dequeue(), 1)
+        self.assertEqual(self.empty_queue.dequeue(), 2)
+
