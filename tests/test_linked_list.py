@@ -22,3 +22,4 @@ class TestLinkedList(unittest.TestCase):
         self.linked_list.print_ll()
         self.assertEqual(self.linked_list.head.data, 3)
         self.assertEqual(self.linked_list.head.next_node.data, 4)
+
