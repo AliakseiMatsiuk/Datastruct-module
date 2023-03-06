@@ -1,6 +1,6 @@
 import unittest
-from datastruct.stack import Node, Stack
-
+#from datastruct.stack import Node, Stack
+from Datastruct.stack import Node, Stack
 
 
 class TestNode(unittest.TestCase):

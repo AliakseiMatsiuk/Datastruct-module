@@ -1,5 +1,5 @@
 import unittest
-from datastruct.custom_queue import Node, Queue
+from Datastruct.custom_queue import Node, Queue
 
 
 class TestNode(unittest.TestCase):
