@@ -23,3 +23,17 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(self.linked_list.head.data, 3)
         self.assertEqual(self.linked_list.head.next_node.data, 4)
 
+    def test_to_list(self):
+        self.assertListEqual(self.linked_list.to_list(), [])
+        self.linked_list.insert_beginning('test')
+        self.assertListEqual(self.linked_list.to_list(), ['test'])
+        self.linked_list.insert_at_end('123')
+        self.linked_list.insert_at_end(1)
+        self.assertListEqual(self.linked_list.to_list(), ['test', '123', 1])
+
+    def test_get_data_by_id(self):
+        self.assertIsNone(self.linked_list.get_data_by_id(123))
+        self.linked_list.insert_beginning({'id': 1, 'name': 'test'})
+        self.assertIsNone(self.linked_list.get_data_by_id(123))
+        self.linked_list.insert_beginning({'id': 2, 'name': 'test2'})
+        self.assertEqual(self.linked_list.get_data_by_id(1), {'id': 1, 'name': 'test'})

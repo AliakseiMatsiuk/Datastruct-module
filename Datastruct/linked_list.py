@@ -40,10 +40,31 @@ class LinkedList:
         ll_string += ' None'
         print(ll_string)
 
+    def to_list(self):
+        result = []
+        current = self.head
+        while current:
+            result.append(current.data)
+            current = current.next_node
+        return result
 
-# ll = LinkedList()
-# ll.insert_beginning({'id': 1})
-# ll.insert_at_end({'id': 2})
-# ll.insert_at_end({'id': 3})
-# ll.insert_beginning({'id': 0})
-# ll.print_ll()
+    def get_data_by_id(self, id_val):
+        current = self.head
+        while current is not None:
+            try:
+                if current.data['id'] == id_val:
+                    return current.data
+            except TypeError:
+                print("Данные не являются словарем или в словаре нет id.")
+            current = current.next_node
+        return None
+
+ll = LinkedList()
+
+# ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
+# ll.insert_at_end('idusername')
+# ll.insert_at_end([1, 2, 3])
+# ll.insert_beginning({'id': 2, 'username': 'mosh_s'})
+#
+# user_data = ll.get_data_by_id(4)
+# print(user_data)
